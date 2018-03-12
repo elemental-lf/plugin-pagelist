@@ -14,4 +14,5 @@ $lang['desc']       = 'Description';
 $lang['diff']       = 'Differences';
 $lang['diff_title'] = 'Show differences to current revisions';
 $lang['diff_alt']   = 'Show differences to current revisions';
+$lang['namespace']  = 'Namespace';
 //Setup VIM: ex: et ts=2 enc=utf-8 :

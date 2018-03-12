@@ -15,5 +15,6 @@ $conf['showimage']    = 0;
 $conf['showdiff']     = 0;
 $conf['sort']         = 0;
 $conf['rsort']        = 0;
+$conf['shownamespace']= 0;
 
 //Setup VIM: ex: et ts=2 :

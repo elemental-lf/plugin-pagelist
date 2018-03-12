@@ -20,5 +20,6 @@ $meta['showimage']    = array('onoff');
 $meta['showdiff']     = array('onoff');
 $meta['sort']         = array('onoff');
 $meta['rsort']        = array('onoff');
+$meta['shownamespace']= array('onoff');
 
 //Setup VIM: ex: et ts=2 :

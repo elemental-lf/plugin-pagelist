@@ -34,5 +34,6 @@ $lang['showimage']        = 'show image column (Pageimage Plugin needed)';
 $lang['showdiff']         = 'show link to the diff page';
 $lang['sort']             = 'sort pages by pagename';
 $lang['rsort']            = 'reverse sort pages by pagename';
+$lang['shownamespace']    = 'add namespace to page title';
 
 //Setup VIM: ex: et ts=2 :

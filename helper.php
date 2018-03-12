@@ -44,11 +44,12 @@ class helper_plugin_pagelist extends DokuWiki_Plugin {
      * These can be overriden by plugins using this class
      */
     function __construct() {
-        $this->style       = $this->getConf('style');
-        $this->showheader  = $this->getConf('showheader');
-        $this->showfirsthl = $this->getConf('showfirsthl');
-        $this->sort        = $this->getConf('sort');
-        $this->rsort       = $this->getConf('rsort');
+        $this->style         = $this->getConf('style');
+        $this->showheader    = $this->getConf('showheader');
+        $this->showfirsthl   = $this->getConf('showfirsthl');
+        $this->sort          = $this->getConf('sort');
+        $this->rsort         = $this->getConf('rsort');
+        $this->shownamespace = $this->getConf('shownamespace');
 
         $this->column = array(
                 'page'     => true,
@@ -157,6 +158,12 @@ class helper_plugin_pagelist extends DokuWiki_Plugin {
                     break;
                 case 'showdiff':
                     $flag = 'diff';
+                    break;
+                case 'namespace':
+                    $this->shownamespace = true;
+                    break;
+                case 'nonamespace':
+                    $this->shownamespace = false;
                     break;
             }
 
@@ -308,7 +315,7 @@ class helper_plugin_pagelist extends DokuWiki_Plugin {
     }
 
     /* ---------- Private Methods ---------- */
-
+    
     /**
      * Page title / link to page
      */
@@ -330,7 +337,7 @@ class helper_plugin_pagelist extends DokuWiki_Plugin {
             $title .= ' />';
         } else {
             if($this->showfirsthl) {
-                $this->page['title'] = $this->_getMeta('title');
+                $this->page['title'] = $this->_getMeta('title') . ($this->shownamespace && getNS($id) ? ' [' . getNS($id) . ']' : '');
             } else {
                 $this->page['title'] = $id;
             }
